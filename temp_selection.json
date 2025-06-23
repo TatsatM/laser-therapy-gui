@@ -1,0 +1,15 @@
+{
+  "User Selections": {
+    "Condition": "Acute",
+    "Size": "Small",
+    "Area": "75cm2",
+    "Skin Tone": "Light"
+  },
+  "Body Part": "Lumbar Spine",
+  "Therapy Data": {
+    "Power": 60,
+    "Pulse Freq": 6500,
+    "Time": 4,
+    "Total Energy": 1500
+  }
+}
