@@ -1,4 +1,3 @@
-🔬 Laser Therapy Machine - Raspberry Pi Based GUI Application
 This project is a Tkinter-based GUI application designed to run on a Raspberry Pi connected to a TFT touchscreen. It serves as the main control interface for a Laser Therapy Machine, allowing users to select therapy modes, conditions, body parts, and view treatment parameters like power, frequency, and energy.
 
 📁 Project Structure
@@ -22,75 +21,63 @@ project-delhi/
 ├── images/                    # Body part and logo images
 ├── tft_boot/                  # Setup to autostart GUI on boot
 └── README.md
-🧠 Features
-🔐 Password-protected entry screen
-🧍 Interactive anatomy-based body part selector
-📝 Condition + Body Part + Skin tone + Size filters
-📊 Dynamic therapy parameter display (Power, Energy, Frequency, etc.)
-⏱️ Timer with Play/Pause and Stop for sessions
-💾 Reads data from Excel and stores temp selection as JSON
-📡 Socket integration for hardware communication
-📱 Touchscreen-compatible full-screen layout
-🖥️ Setup Instructions
-🔧 Hardware Requirements
-Raspberry Pi (preferably 4B)
-TFT LCD Touchscreen (GPIO interface)
-Laser diode module with voltage/frequency control
-Power Supply Unit
-Optional: Custom PCB for interfacing
-🛠️ Software Installation
-Install Required Python Packages
+
+
+
+Overview
+This project is a Laser Therapy Device Control System designed for physiotherapy applications. The software features a user-friendly GUI for configuring laser parameters, selecting treatment protocols, and interfacing with hardware. It demonstrates advanced skills in Python, GUI development, modular programming, and hardware integration.
+
+Features
+Python Tkinter GUI
+Built a multi-page, intuitive interface using Tkinter, supporting real-time parameter adjustment and therapy monitoring.
+
+Modular, Reusable Code
+Structured the application for maximum code reuse and maintainability, with clear separation of logic and UI components.
+
+Hardware Integration
+Enabled communication with Raspberry Pi for direct control of laser hardware.
+
+Dynamic Protocol Management
+Supports loading and updating therapy protocols via external JSON files.
+
+Responsive Layout
+Designed for usability across various screen sizes, including auto-scaling features.
+
+Real-Time Data Display
+Provides live updates of device status and therapy progress.
+
+Security Features
+Includes password-protected access for engineering and settings modes.
+
+Software Skills Highlighted
+Python Programming: Advanced use of Python for GUI, hardware I/O, and data management.
+
+Tkinter GUI Development: Multi-frame layouts, custom widgets, image integration, and event-driven design.
+
+File Handling & Data Integration: Dynamic protocol loading using JSON and image files.
+
+Device Automation: Automated app startup and device communication on Raspberry Pi and Windows.
+
+Problem Solving: Addressed real-world engineering challenges such as responsive design, live status updates, and secure access.
+
+Getting Started
+
+Tkinter
+
+Pillow (PIL)
+
+Raspberry Pi (for hardware integration)
+
+JSON protocol files
+
+Installation
 
 bash
-Copy
-Edit
-sudo apt-get update
-sudo apt-get install python3-tk python3-pil
-pip3 install openpyxl
-Autostart GUI on Boot
-Add this to your Raspberry Pi's autostart:
+pip install pillow
+Running the App
 
 bash
-Copy
-Edit
-@sudo python3 /home/pi/Desktop/project-delhi/PythonProject/password.py
-Enable SPI/GPIO
-Enable GPIO/SPI from Raspberry Pi config:
+python main.py
+Customizing Protocols
 
-bash
-Copy
-Edit
-sudo raspi-config
-🚀 Run the Application
-On Raspberry Pi, from terminal:
-
-bash
-Copy
-Edit
-cd ~/Desktop/project-delhi/PythonProject
-python3 password.py
-🧪 Therapy Modes
-Auto Mode: Guided navigation through condition and body part to display settings
-
-Therapy Mode: Allows manual selection of parameters
-
-Protocol Mode: Predefined treatment protocols
-
-📡 Hardware Integration
-Uses GPIO or socket communication to send therapy values (power, frequency, time) to the connected laser hardware.
-
-Works with custom PCB or standard laser control modules.
-
-⚠️ Safety Notice
-Ensure appropriate laser safety measures are taken when operating the system. Only qualified personnel should use this for therapy sessions.
-
-📚 References
-Tkinter Documentation
-
-Raspberry Pi GPIO Tutorials
-
-Laser Therapy Clinical Guidelines
-
-PIL (Pillow) for image support
-
-Excel handling via openpyxl
+Add your protocol JSON files to the /protocols directory.
